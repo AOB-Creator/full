@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root{
     --bgcolor: aliceblue;
     --bgcal:#202c36;
+    --fnt: 'Roboto', sans-serif;
+    --bltf: 'Atkinson Hyperlegible', sans-serif;
 }
 
 *{
@@ -25,6 +29,7 @@ body{
     height: 80%;
     background-color: var(--bgcal);
     padding: 20px 10px;
+    position: relative;
 }
 @media(max-width: 662px){
     .calculator{
@@ -37,9 +42,27 @@ body{
         margin: 10px 0px;
     }
 }
+
 .tops{
-    height: 25px;
+    height: auto;
+    min-height: 25px;
     background-color: rgba(245, 222, 179, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5px;
+}
+
+#cols{
+    display: inline-block;
+    font-size: 40px !important;
+    color: rgba(255, 255, 255, 0.671) !important;
+    cursor: pointer;
+    background-color: #28323a;
+    padding: 7px !important;
+    width: 30px !important;
+    height: 30px !important;
+    
 }
 
 #calc{
@@ -48,7 +71,7 @@ body{
     height: 50px;
     background-color: var(--bgcal);
     color: white;
-    padding: 0px 20px;
+    padding: 0px 10px;
     font-size: 25px;
     text-align: end;
     border: none;
@@ -130,4 +153,122 @@ body{
     
     background-color: #292e31;
     
+}
+.nonemenu{
+    width: 0% !important;
+}
+
+.menubar{
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1b2125;
+    scroll-behavior: smooth;
+    overflow: scroll;
+    
+}
+.lets li{
+    height: 10vh;
+    list-style: none;
+    color: white;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: var(--bltf) !important;
+    font-weight: 300;
+}
+.lets li:hover{
+    background-color: #292e31;
+}
+
+.imgprofile{
+    height: 17vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px 20px;
+    
+    
+}
+.imgprofile .imgs img{
+    width: 70px !important;
+    height: 70px !important;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;   
+}
+.imgprofile .imgs{
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: anime 10s infinite;
+    transition: .3s !important;
+}
+
+
+@keyframes anime{
+    0%{
+        background: linear-gradient(10deg, green, black);
+        transition: .3s !important;
+    }
+    20%{
+        background: linear-gradient(20deg, rgb(0, 98, 128), rgb(0, 0, 0));
+        transition: .3s !important;
+    }
+    
+    60%{
+        background: linear-gradient(40deg, rgb(128, 0, 128), rgb(0, 0, 0));
+        transition: .3s !important;
+    }
+    
+    100%{
+        background: linear-gradient(60deg, rgb(31, 7, 247), black);
+        transition: .3s !important;
+    }
+
+}
+
+
+
+
+
+.nameperson h4{
+    color: rgb(190, 190, 190);
+    
+    font-weight: 600;
+}
+.nameperson{
+    margin-left: 20px;
+    font-family: var(--fnt);   
+}
+
+.nameperson> *{
+    margin: 5px 0px;
+}
+.logout h4{
+    font-family: var(--fnt);
+    display: flex;
+    align-items: center;
+    background-color: #28323a;
+    padding: 10px 20px;
+    color: white;
+    font-size: 14px;
+}
+.logout h4 > i{
+    margin-left: 30px !important;
+    display: inline-block;
+
+}
+.logout{
+    height: 10vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: rgb(37, 39, 41);
+    padding: 0 20px ;
 }

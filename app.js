@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 var text = ""
 
 const input = document.getElementById("calc");
@@ -19,25 +29,26 @@ buttons.forEach((item)=>{
     item.addEventListener("click", function(event){
 
         
+        // switch(text.substring(text.length-1, text.length)){
+        //     case "+": text=`${text.slice(0, text.length-1)}`; break;
+        //     case "-": text=`${text.slice(0, text.length-1)}`; break;
+        //     case "*": text=`${text.slice(0, text.length-1)}`; break;
+        //     case "/": text=`${text.slice(0, text.length-1)}`; break;
+        //     case ".": text=`${text.slice(0, text.length-1)}`; break;            
+        // }        
+
+
+        
         switch(event.target.innerText){
             case "C": text=text; break;
             case "=": text=text; break;
-            case "+/-": text=-text; break;
+            case "+/-": text=`${-1* eval(text)}`; break;
             case "%": text=`${text}/100`; break;
             case ".": text=`${text}.`; break;            
             default: text = text + event.target.innerText ; 
         }
 
         console.log(text.substring(text.length-1, text.length))
-
-        // switch(text.substring(text.length-1, text.length)){
-        //     case "+": text=text.slice(0, text.length-1); break;
-        //     case "-": text=text.slice(0, text.length-1); break;
-        //     case "*": text=text.slice(0, text.length-1); break;
-        //     case "/": text=text.slice(0, text.length-1); break;
-        //     case ".": text=text.slice(0, text.length-1); break;
-        // }
-
 
         
         
@@ -69,3 +80,15 @@ evaluation.addEventListener("click", function(){
     }
     
 })
+
+
+
+
+
+
+
+
+
+
+
+
