@@ -1,15 +1,133 @@
+:root{
+    --bgcolor: aliceblue;
+    --bgcal:#202c36;
+}
+
 *{
     margin: 0;
     padding: 0%;
     outline: none;
     text-decoration: none;
+    box-sizing: border-box;
 }
+
+
 body{
-    height: 300vh;
+    height: 100vh;
+    background-color: var(--bgcolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-img{
+.calculator{
+    border-radius: 10px;
+    width: 40%;
+    height: 80%;
+    background-color: var(--bgcal);
+    padding: 20px 10px;
+}
+@media(max-width: 662px){
+    .calculator{
+        width: 100% !important;
+        height: 100vh;
+        padding: 20px 15px;
+        border-radius: 0px;
+    }
+    .buttons div{
+        margin: 10px 0px;
+    }
+}
+.tops{
+    height: 25px;
+    background-color: rgba(245, 222, 179, 0);
+}
+
+#calc{
+    display: block;
     width: 100%;
-    height: auto;
+    height: 50px;
+    background-color: var(--bgcal);
+    color: white;
+    padding: 0px 20px;
+    font-size: 25px;
+    text-align: end;
+    border: none;
+    outline: none;
+}
+.firstline-buttons{
+    flex: 1;
+    display: flex;
+}
+.firstline-buttons button{
+    background-color: rgb(145, 123, 123);
+}
+.firstline-buttons button:first-child{
+    background-color: rgba(243, 49, 49, 0.568);
+}
+.firstline-buttons button:first-child:hover{
+    background-color: rgba(240, 94, 94, 0.568);
+}
+.firstline-buttons button:first-child:active{
+    background-color: rgba(255, 7, 7, 0.568);
+}
+.secondline-buttons{
+    flex: 1;
+    display: flex;
+}
+
+
+.thirdline-buttons{
+    flex: 1;
+    display: flex;
+}
+
+.fourthline-buttons{
+    flex: 1;
+    display: flex;
+}
+
+.endline-buttons{
+    flex: 1;
+    display: flex;
+}
+.endline-buttons button:first-child{
+    flex: 2;
+}
+.endline-buttons button:last-of-type{
+    background-color: royalblue;
+}
+.endline-buttons button:last-of-type:hover{
+    background-color: rgb(80, 117, 226);
+}
+.endline-buttons button:last-of-type:active{
+    background-color: rgb(51, 94, 224);
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
     
-    filter: contrast(2);
+    flex-direction: column;
+}
+
+.buttons button{
+    flex: 1;
+    height: 80px;
+    color: white;
+    background-color: var(--bgcal);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.buttons button:hover{
+    
+    background-color: #28323a;
+    
+}
+
+.buttons button:active{
+    
+    background-color: #292e31;
+    
 }
