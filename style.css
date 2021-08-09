@@ -55,7 +55,7 @@ body{
 
 #cols{
     display: inline-block;
-    font-size: 40px !important;
+    font-size: 20px !important;
     color: rgba(255, 255, 255, 0.671) !important;
     cursor: pointer;
     background-color: #28323a;
@@ -156,9 +156,12 @@ body{
 }
 .nonemenu{
     width: 0% !important;
+    transition: 1s !important;
+    background-color: #1b2125;
 }
 
 .menubar{
+    transition: 1s;
     position: absolute;
     width: 80%;
     height: 100%;
@@ -166,9 +169,22 @@ body{
     left: 0;
     background-color: #1b2125;
     scroll-behavior: smooth;
-    overflow: scroll;
-    
+    overflow: scroll;   
 }
+
+button{
+    background-color: transparent;
+    border: none;
+}
+
+@media(min-width:600px){
+    .menubar{
+     
+        width: 0% !important;
+     
+    }   
+}
+
 .lets li{
     height: 10vh;
     list-style: none;
@@ -187,15 +203,15 @@ body{
 .imgprofile{
     height: 17vh;
     display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center !important;
+    padding: 10px 10px;
     
     
 }
 .imgprofile .imgs img{
-    width: 70px !important;
-    height: 70px !important;
+    width: 60px !important;
+    height: 60px !important;
     object-fit: cover;
     object-position: center;
     border-radius: 50%;   
@@ -213,27 +229,32 @@ body{
 
 @keyframes anime{
     0%{
-        background: linear-gradient(10deg, green, black);
-        transition: .3s !important;
+        background: linear-gradient(90deg, green, black);
+        
     }
     20%{
-        background: linear-gradient(20deg, rgb(0, 98, 128), rgb(0, 0, 0));
-        transition: .3s !important;
+        background: linear-gradient(180deg, rgb(0, 98, 128), rgb(0, 0, 0));
+        
     }
     
     60%{
-        background: linear-gradient(40deg, rgb(128, 0, 128), rgb(0, 0, 0));
-        transition: .3s !important;
+        background: linear-gradient(270deg, rgb(128, 0, 128), rgb(0, 0, 0));
+        
     }
     
     100%{
-        background: linear-gradient(60deg, rgb(31, 7, 247), black);
-        transition: .3s !important;
+        background: linear-gradient(360deg, rgb(31, 7, 247), black);
+        
     }
 
 }
-
-
+.closed{
+    transform: translateY(-20%);
+    margin-left: 10px;
+}
+.closed i{
+    font-size: 14px !important;
+}
 
 
 
@@ -243,7 +264,7 @@ body{
     font-weight: 600;
 }
 .nameperson{
-    margin-left: 20px;
+    margin-left: 10px;
     font-family: var(--fnt);   
 }
 
