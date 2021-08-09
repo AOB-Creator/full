@@ -156,12 +156,16 @@ body{
 }
 .nonemenu{
     width: 0% !important;
-    transition: 1s !important;
+    transition: .5s !important;
     background-color: #1b2125;
+}
+.menubar *{
+    flex-shrink: 0 !important;
+    
 }
 
 .menubar{
-    transition: 1s;
+    transition: .5s;
     position: absolute;
     width: 80%;
     height: 100%;
@@ -189,9 +193,9 @@ button{
     height: 10vh;
     list-style: none;
     color: white;
-    padding: 0px 20px;
+    padding: 0px 30px;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     font-family: var(--bltf) !important;
     font-weight: 300;
@@ -259,8 +263,12 @@ button{
 
 
 .nameperson h4{
-    color: rgb(190, 190, 190);
-    
+    color: rgb(190, 190, 190);   
+    font-weight: 600;
+}
+
+.nameperson h5{
+    color: rgb(252, 252, 252);   
     font-weight: 600;
 }
 .nameperson{
